@@ -1,4 +1,3 @@
-package pizzaria;
 
 public class Pizza implements assar{
 
@@ -9,21 +8,30 @@ public class Pizza implements assar{
 	public String getSabor() {
 		return sabor;
 	}
-	public void setSabor(String sabor) {
-		this.sabor = sabor;
-	}
+	 public void setSabor(String sabor) {
+	        if (sabor == null || sabor.trim().isEmpty()) {
+	            throw new IllegalArgumentException("Sabor da pizza não pode ser nulo ou vazio.");
+	        }
+	        this.sabor = sabor;
+	    }
 	public String getTamanho() {
 		return tamanho;
 	}
 	public void setTamanho(String tamanho) {
-		this.tamanho = tamanho;
-	}
+        if (tamanho == null || tamanho.trim().isEmpty()) {
+            throw new IllegalArgumentException("Tamanho da pizza não pode ser nulo ou vazio.");
+        }
+        this.tamanho = tamanho;
+    }
 	public double getPreco() {
 		return preco;
 	}
 	public void setPreco(double preco) {
-		this.preco = preco;
-	}
+        if (preco < 0) {
+            throw new IllegalArgumentException("Preço da pizza não pode ser negativo.");
+        }
+        this.preco = preco;
+    }
 	
 	public Pizza(String sabor, String tamanho, double preco) {
 		this.sabor = sabor;
@@ -40,9 +48,5 @@ public class Pizza implements assar{
 	public void assarPizza() {
 		
 	}
-	
-	
-
-	
 	
 }

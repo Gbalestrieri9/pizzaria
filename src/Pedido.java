@@ -1,4 +1,4 @@
-package pizzaria;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +20,7 @@ public class Pedido {
 	        for(Pizza pizza:pizzas) {
 	        	System.out.println("Sabor: " + pizza.getSabor()+" "+ "Tamanho: " + pizza.getTamanho()+ " "+ "Preço: " + pizza.getPreco());
 	        }
+	       
 	        
 	    }
 	    

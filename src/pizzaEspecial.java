@@ -1,4 +1,4 @@
-package pizzaria;
+
 
 public class pizzaEspecial extends Pizza implements assar{
 	
@@ -8,9 +8,5 @@ public class pizzaEspecial extends Pizza implements assar{
 		super(sabor, tamanho, preco);
 		this.pizzaEspecial = pizzaEspecial;
 	}
-
-	
-	
-	
 
 }
